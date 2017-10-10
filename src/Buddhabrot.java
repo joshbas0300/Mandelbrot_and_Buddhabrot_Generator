@@ -46,7 +46,7 @@ public class Buddhabrot {
 
 
         Random random = new Random();
-        for (int samples = 0; samples < 1000000; samples++) {
+        for (int samples = 0; samples < 2000000; samples++) {
 
 
             int randx = random.nextInt(width);
@@ -58,7 +58,7 @@ public class Buddhabrot {
             Complex complex = new Complex(complex_real, complex_imaginary);
 
 
-            List<Complex> pointList = formula(complex, 2000);
+            List<Complex> pointList = formula(complex, 20);
 
             for (Complex point : pointList) {
 
@@ -66,14 +66,16 @@ public class Buddhabrot {
 
                 if (point.im() <= 2 && point.im() >= -2 && point.re() <= 2 && point.re() >= -2) {
 
-                    int i = (int) testmap(point.re(), -2, 2, 0, 500);
-                    int j = (int) testmap(point.im(), -2, 2, 0, 500);
+                    int i = (int) testmap(point.re(), -2, 2, 0, 499);
+                    int j = (int) testmap(point.im(), -2, 2, 0, 499);
 
                     if (i > 500 || i < 0 && j > 500 || j < 0) {
                         System.err.println("thefuckthiskeepshappening");
                     }
 
-                    pixels[i][j]++;
+                    //System.out.println("I = "+i+" J = "+j);
+
+                    ++pixels[i][j];
 
                 }
 
@@ -107,7 +109,7 @@ public class Buddhabrot {
         }
 
         try {
-            ImageIO.write(image, "png", new File("plswork2.png"));
+            ImageIO.write(image, "png", new File("plswork6.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }
