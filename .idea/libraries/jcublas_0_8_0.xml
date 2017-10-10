@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="jcublas-0.8.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../Java Libraries/JCuda-All-0.8.0-bin-windows-x86_64/jcublas-0.8.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Java Libraries/JCuda-All-0.8.0-bin-windows-x86_64/jcuda-0.8.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Java Libraries/JCuda-All-0.8.0-bin-windows-x86_64/jcufft-0.8.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Java Libraries/JCuda-All-0.8.0-bin-windows-x86_64/jcurand-0.8.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Java Libraries/JCuda-All-0.8.0-bin-windows-x86_64/jcusolver-0.8.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Java Libraries/JCuda-All-0.8.0-bin-windows-x86_64/jcusparse-0.8.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Java Libraries/JCuda-All-0.8.0-bin-windows-x86_64/jnvgraph-0.8.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
