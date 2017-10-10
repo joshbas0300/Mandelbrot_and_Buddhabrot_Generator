@@ -15,10 +15,6 @@ public class Buddhabrot {
     static int width = 500, height = 500, iter;
     static int[][] pixels = new int[width][height];
 
-//    public static double map(double value, double low1, double high1, double low2, double high2) {
-//        return low2 + (value - low1) * (high2 - low2) / (high1 - low2);
-//    }
-
 
     final static double EPSILON = 1e-12;
 
@@ -62,7 +58,6 @@ public class Buddhabrot {
 
             for (Complex point : pointList) {
 
-//                System.out.println(point);
 
                 if (point.im() <= 2 && point.im() >= -2 && point.re() <= 2 && point.re() >= -2) {
 
@@ -70,10 +65,8 @@ public class Buddhabrot {
                     int j = (int) testmap(point.im(), -2, 2, 0, 499);
 
                     if (i > 500 || i < 0 && j > 500 || j < 0) {
-                        System.err.println("thefuckthiskeepshappening");
+                        System.err.println("plsno");
                     }
-
-                    //System.out.println("I = "+i+" J = "+j);
 
                     ++pixels[i][j];
 
@@ -100,9 +93,9 @@ public class Buddhabrot {
         for (int i = 0; i < width; i++) {
             for (int j = 0; j < height; j++) {
 
-                int rgb = (int) testmap(pixels[i][j],0,maxint,0,255);
+                int rgb = (int) testmap(pixels[i][j], 0, maxint, 0, 255);
 
-                image.setRGB(i,j,rgb);
+                image.setRGB(i, j, rgb);
 
 
             }
@@ -113,16 +106,6 @@ public class Buddhabrot {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
-//        for (int i = 0; i < width; i++) {
-//            for (int j = 0; j < height; j++) {
-//                if(pixels[i][j] > 2)
-//                System.out.println(pixels[i][j]);
-//            }
-//        }
-
-
     }
 
 
